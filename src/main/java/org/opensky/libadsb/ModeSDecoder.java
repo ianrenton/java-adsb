@@ -58,7 +58,7 @@ public class ModeSDecoder {
 			case 17: case 18: case 19:
 				// check whether this is an ADS-B message (see Figure 2-2, RTCA DO-260B)
 				if (modes.getDownlinkFormat() == 17 ||
-						modes.getDownlinkFormat() == 18 && modes.getFirstField() < 2 ||
+						modes.getDownlinkFormat() == 18 && modes.getFirstField() <= 2 ||
 						modes.getDownlinkFormat() == 19 && modes.getFirstField() == 0) {
 
 					// interpret ME field as standard ADS-B
